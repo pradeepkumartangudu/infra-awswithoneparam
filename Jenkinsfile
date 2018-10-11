@@ -21,7 +21,7 @@ pipeline {
                 ls ./ -al
 		pwd
 		echo $tf_path
-		sudo cp aws_config.tf $tf_path
+		#sudo cp aws_config.tf $tf_path
 		export AWS_ACCESS_KEY_ID=$access_key
 		export AWS_SECRET_ACCESS_KEY=$secret_key
                 ./terraform init -var bucketname=$bucketname -backend-config="access_key=$access_key" -backend-config="secret_key=$secret_key" -backend-config="key=runtime/$bucketname/terraform.tfstate" ./$tf_path
