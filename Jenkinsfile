@@ -17,7 +17,7 @@ pipeline {
                 sh 'unzip -qo terraform_0.11.8_linux_amd64.zip'
                 sh '''#!/bin/bash -l
 				
-				
+		echo ${params.DEBUG_BUILD}		
 		echo "test script"
 		pwd
                 ls ./ -al
