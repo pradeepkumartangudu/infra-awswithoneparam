@@ -17,8 +17,7 @@ pipeline {
 		sh 'wget -q https://releases.hashicorp.com/terraform/0.11.8/terraform_0.11.8_linux_amd64.zip'
                 sh 'unzip -qo terraform_0.11.8_linux_amd64.zip'
                 sh '''#!/bin/bash -l
-		echo "${params.DEBUG_BUILD}"		
-		echo $untypedBooleanVar		
+		echo "bollean value : $untypedBooleanVar"		
 		echo "test script"
 		pwd
                 ls ./ -al
