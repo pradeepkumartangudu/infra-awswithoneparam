@@ -5,7 +5,11 @@ pipeline {
                 name: 'bucketname',
                 defaultValue:"",
                 description: "Where to put the build!")
+	    boolean(name: 'boolean',
+                defaultValue:"false",
+                description: "Where to put the build!")
     }
+	
     stages {
         stage('Build') { 
             steps { 
